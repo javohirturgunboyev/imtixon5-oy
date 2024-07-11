@@ -38,10 +38,10 @@ nexBtn.addEventListener('click', function(){
 
 function showAlert() {
     Swal.fire({
-      title: 'Qo`shildi!',
+      title: 'Haridingiz amalga oshirildi haridingiz uchun rahmat!',
       icon: 'success',
       showConfirmButton: false,
       timer: 3000
     });
-    alert("savatchaustiga bosib harid qilgan maxsulotingizni ko'rishingiz mumkin")
+    alert("savatcha ustiga bosib harid qilgan maxsulotingizni ko'rishingiz mumkin marhamat")
 }

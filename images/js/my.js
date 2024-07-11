@@ -23,7 +23,7 @@ function createCard(product) {
 }
 
 function handleCardClick(productId) {
-    window.location.href = `/pages/single.html?id=${productId}`;
+    window.location.href = `/pages/details.html?id=${productId}`;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
