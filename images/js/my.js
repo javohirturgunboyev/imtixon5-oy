@@ -3,15 +3,20 @@ const cardsWrapper = document.getElementById('cards-wrapper')
 
 function createCard(product) {
     return `
-        <div class="product" style="bacgkroundColor="gar"" id="card" onclick="handleCardClick(${product.id})">
+        <div class="product" id="card" onclick="handleCardClick(${product.id})">
             <div class="product-status product-card">
                 <h6 class="not-available">Нет в наличии</h6>
                 <h3 class="sale">SALE</h3>
             </div>
-            <img src="${product.image}" width="295" height="320" alt="Product Image" class="product-image">
-            <div class="product-rating">
-                <span class="stars">⭐️⭐️⭐️☆☆</span>
-                <span class="reviews">(12 отзывов)</span>
+            <div class='gift'>
+                <img src="../img/gift.svg">
+                <p>Подарок</p>
+            </div>
+            <img class='card-img' src="${product.image}" width="288" height="320px" alt="Product Image" class="product-image">
+            <div class="stars" display=:'flex'; flex-direction:'row';>
+                ${"★".repeat(Math.round(product.star))}
+                ${"☆".repeat(5 - Math.round(product.star))}
+                <h5 >(${product.comments})отзывов</h5>
             </div>
             <h2 class="product-title">${product.name}</h2>
             <div class="product-price">
@@ -23,7 +28,7 @@ function createCard(product) {
 }
 
 function handleCardClick(productId) {
-    window.location.href = `/pages/details.html?id=${productId}`;
+    window.location.href = "/pages/details.html?id=${productId}";
 }
 
 document.addEventListener('DOMContentLoaded', function() {
